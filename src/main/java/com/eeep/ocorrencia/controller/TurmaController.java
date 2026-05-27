@@ -14,9 +14,11 @@ import java.util.List;
 public class TurmaController {
 
     private List<Turma> turmas = new ArrayList<>();
+    private long id = 1;
 
-    @GetMapping("/")
+    @GetMapping("/turma")
     public String abrirFormulario(Model model) {
+
         model.addAttribute("listaturmas", turmas);
         model.addAttribute("turma", new Turma());
         return "cadastro";
@@ -24,7 +26,11 @@ public class TurmaController {
 
     @PostMapping("/salvar")
     public String salvarTurma(@ModelAttribute Turma turma) {
+
+        turma.setId(id++);
         turmas.add(turma);
-        return "redirect:/";
+
+
+        return "redirect:/turma";
     }
 }

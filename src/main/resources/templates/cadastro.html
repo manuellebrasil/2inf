@@ -6,19 +6,18 @@
     <title>HOME</title>
 </head>
 <body>
-<h1>Cadastro de Aluno</h1>
+<h1>Cadastro de Turma</h1>
 <table border="1">
 
     <tr>
-        <th>Número</th>
-        <th>Nome</th>
-        <th>Sexo</th>
+        <th>Código</th>
+        <th>Descrição</th>
     </tr>
 
-    <tr th:each="aluno : ${listaAlunos}">
-        <td th:text="${aluno.numero}"></td>
-        <td th:text="${aluno.nome}"></td>
-        <td th:text="${aluno.sexo}"></td>
+    <tr th:each="turma" : ${listaTurma}="" }">
+        <td th:text="${turma.código}"></td>
+        <td th:text="${turma.descrição}"></td>
+
     </tr>
 
 </table>
