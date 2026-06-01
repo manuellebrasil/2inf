@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOME</title>
+    <title>Cadatro de Turma</title>
 </head>
 <body>
-<h1>Cadastro de Aluno</h1>
+
+<h1>Cadastro de Turma</h1>
+
+<form th:action="@{/salvarTurma}" method="post">
+
+    <label>Código:</label>
+    <input type="number" name="codigo"><br><br>
+
+    <label>Descrição:</label>
+    <input type="text" name="descricao"><br><br>
+
+
+        <button type="submit">salvar</button>
+
+    </form>
+
 <table border="1">
-
     <tr>
-        <th>Número</th>
-        <th>Nome</th>
-        <th>Sexo</th>
+        <th>ID</th>
+        <th>Código</th>
+        <th>Descriçao</th>
     </tr>
 
-    <tr th:each="aluno : ${listaAlunos}">
-        <td th:text="${aluno.numero}"></td>
-        <td th:text="${aluno.nome}"></td>
-        <td th:text="${aluno.sexo}"></td>
-    </tr>
 
+
+<tr th:each="turma : ${listaturmas}">
+    <td th:text="${turma.id}"></td>
+    <td th:text="${turma.codigo}"></td>
+    <td th:text="${turma.descricao}"></td>
+</tr>
 </table>
+
 </body>
 </html>
