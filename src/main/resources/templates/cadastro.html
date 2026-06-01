@@ -7,6 +7,19 @@
 </head>
 <body>
 <h1>Cadastro de Aluno</h1>
+
+<form th:action="@{/salvar}" th:object="${aluno}" method="post">
+    <label>Número:</label>
+    <input type="text" th:field="*{numero}">
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}">
+    <label>Sexo:</label>
+    <input type="text" th:field="*{sexo}" >
+    <input type="submit" value="salvar">
+</form>
+
+
+
 <table border="1">
 
     <tr>
