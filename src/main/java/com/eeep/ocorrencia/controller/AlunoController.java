@@ -5,24 +5,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class AlunoController {
-
     @GetMapping("/")
     public String abrirFormulario(Model model) {
-        List<Aluno> alunos = new ArrayList<>();
-
-        alunos.add(new Aluno(1, "Israel", "M"));
-        alunos.add(new Aluno(2, "Maria", "F"));
-        alunos.add(new Aluno(3, "João", "M"));
-        alunos.add(new Aluno(4, "Pedro", "M "));
-
-        model.addAttribute("listaAlunos", alunos);
+        model.addAttribute("aluno", new Aluno());
         return "cadastro";
 
     }
+    @PostMapping("/salvar")
+    public String salvarAluno(Aluno aluno){
+        System.out.println(aluno.getNumero());
+        System.out.println(aluno.getNome());
+        System.out.println(aluno.getSexo());
+        return "cadastro";
+    }
+
 }
