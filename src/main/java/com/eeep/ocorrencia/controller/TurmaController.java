@@ -13,13 +13,13 @@ import java.util.List;
 
 @Controller
 public class TurmaController {
-    @GetMapping("/")
+    @GetMapping("/turma")
     public String abrirFormulario(Model model) {
         model.addAttribute("turma", new Turma());
         return "cadastro";
 
     }
-    @PostMapping("/salvar")
+    @PostMapping("/salvarTurma")
     public String salvarTurma(Turma turma){
         System.out.println(turma.getCodigo());
         System.out.println(turma.getDescricao());
@@ -27,3 +27,6 @@ public class TurmaController {
     }
 
 }
+
+
+
