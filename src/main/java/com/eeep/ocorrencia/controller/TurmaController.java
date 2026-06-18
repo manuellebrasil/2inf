@@ -19,7 +19,7 @@ public class TurmaController {
         return "cadastro";
 
     }
-    @PostMapping("/salvarTurma")
+    @PostMapping("/turma/salvar")
     public String salvarTurma(Turma turma){
         System.out.println(turma.getCodigo());
         System.out.println(turma.getDescricao());

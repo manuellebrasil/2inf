@@ -8,7 +8,7 @@
 <body>
 <h1>Cadastro de Turma</h1>
 
-<form th:action="@{/salvarTurma}" th:object="${turma}" method="post">
+<form th:action="@{/turma/salvar}" th:object="${turma}" method="post">
     <label>Código:</label>
     <input type="text" th:field="*{codigo}">
     <label>Descrição:</label>
