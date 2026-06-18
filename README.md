@@ -1,13 +1,7 @@
 # 2inf
 
-#Equipe 1
-##Nome do Integrante 1
-##Nome do Integrante 2
-##Nome do Integrante 3
-##Nome do Integrante 4
-
-#Equipe 2
-##Nome do Integrante 1
-##Nome do Integrante 2
-##Nome do Integrante 3
-##Nome do Integrante 4
+#Equipe 4
+##Ana Mara dos Santos Santiago Nº 04
+##Estefani das Neves Santos Nº 10 
+##Maria Eduarda Santos Inácio Nº 30
+##Wannieli Silva Ramos Nº 44

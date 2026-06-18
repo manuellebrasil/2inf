@@ -5,6 +5,8 @@ public class Aluno {
     private Integer numero;
     private String nome;
     private String sexo;
+    private Integer matricula;
+    private Integer cpf;
 
     public Aluno() {
     }
@@ -37,5 +39,17 @@ public class Aluno {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public void setMatricula(Integer matricula){
+        this.matricula = matricula
+    }
+
+    public Integer getMatricula(){
+        return matricula;
+    }
+
+    public Integer getCpf(){
+        this.cpf = cpf;
     }
 }

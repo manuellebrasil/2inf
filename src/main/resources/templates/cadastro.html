@@ -10,15 +10,24 @@
 
 <form th:action="@{/salvar}" th:object="${aluno}" method="post">
     <label>Número:</label>
-    <input type="text" th:field="*{numero}">
+    <input type="text" th:field="*{numero}"><br>
     <label>Nome:</label>
-    <input type="text" th:field="*{nome}">
+    <input type="text" th:field="*{nome}"><br>
     <label>Sexo:</label>
-    <input type="text" th:field="*{sexo}" >
+    <select th:field="*{sexo}">
+        <option value="" disabled selected>Selecione...</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Prefiro não Informar">Prefiro não Informar</option>
+    </select>
+
+    <br><label>Matricula:</label>
+    <input type="text" th:field="*{matricula}*"><br>
+    <label>CPF:</label>
+    <input type="text" th:field="*{cpf}*">
     <input type="submit" value="salvar">
+
 </form>
-
-
 
 <table border="1">
 
@@ -26,14 +35,20 @@
         <th>Número</th>
         <th>Nome</th>
         <th>Sexo</th>
+        <th>Matricula</th>
+        <th>CPF</th>
     </tr>
 
     <tr th:each="aluno : ${listaAlunos}">
         <td th:text="${aluno.numero}"></td>
         <td th:text="${aluno.nome}"></td>
         <td th:text="${aluno.sexo}"></td>
+        <td th:text="${aluno.matricula}"></td>
+        <td th:text="${aluno.cpf}"></td>
+        <tr th:each="aluno : ${listaAlunos}">
     </tr>
 
 </table>
+
 </body>
 </html>
