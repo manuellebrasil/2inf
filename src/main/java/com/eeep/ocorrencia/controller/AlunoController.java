@@ -25,6 +25,13 @@ public class AlunoController {
         System.out.println(aluno.getNome());
         System.out.println(aluno.getSexo());
         return "cadastro";
+    public String salvarAluno(@ModelAttribute("aluno") Aluno aluno){
+        System.out.println(aluno.getNumero());
+        System.out.println(aluno.getNome());
+        System.out.println(aluno.getSexo());
+        System.out.println(aluno.getMatricula());
+        System.out.println(aluno.getCpf());
+        return "redirect:/";
     }
 
 }
